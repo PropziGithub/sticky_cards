@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Sticky Cards",
+  description: "Build loyalty for your dispensary with a compliant Cannabis Loyalty Card",
   navItems: [
     {
       label: "Home",

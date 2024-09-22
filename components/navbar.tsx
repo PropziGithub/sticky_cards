@@ -11,28 +11,15 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
-import { link as linkStyles } from "@nextui-org/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
+import { ChevronDownIcon, Logo } from "@/components/icons";
 
 export const AppNavbar = () => {
   return (
-    <Navbar maxWidth="full" className="bg-stickyWhite">
+    <Navbar maxWidth="full" position="sticky" className="bg-stickyWhite">
       <NavbarContent className="w-full flex-1">
         <NavbarBrand>
           <Logo size={70} />
-          <p className="font-bold text-inherit">ACME</p>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-10 w-full flex-1">
@@ -70,6 +57,7 @@ export const AppNavbar = () => {
                   className="text-stickyBlack p-0 bg-transparent data-[hover=true]:bg-transparent"
                   radius="sm"
                   variant="light"
+                  endContent={<ChevronDownIcon size={8} />}
                 >
                   Support
                 </Button>

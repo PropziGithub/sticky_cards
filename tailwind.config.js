@@ -16,6 +16,10 @@ module.exports = {
       colors: {
         stickyWhite: '#ECEBE5',
         stickyBlack: '#27211E',
+        stickyYellow: '#FCDF3D',
+        stickyGreen: '#75B855',
+        stickyOrange: '#FFAC00',
+        stickyRed: '#FB5521',
       }
     },
   },
