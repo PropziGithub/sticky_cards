@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardHeader, CardBody } from "@nextui-org/react";
+import { Card,CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import phone from "@/images/phone2.svg";
 import { QRIcon } from "@/components/icons";
@@ -7,7 +7,7 @@ export default function ScanQR() {
   return (
     <div className="w-full flex justify-center items-start space-x-6 p-10 bg-stickyWhite">
       <Card
-        className="min-w-[563px] h-[838px] bg-stickyGreen rounded-[18px]"
+        className="w-[563px] h-[838px] bg-stickyGreen rounded-[18px]"
         shadow="none"
       >
         <CardBody className="overflow-visible flex justify-center items-center">
@@ -23,7 +23,7 @@ export default function ScanQR() {
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam.
         </span>
-        <QRIcon height={231} width={231} />
+        <QRIcon height={231} width={231} className="text-stickyYellow" />
       </div>
     </div>
   );
