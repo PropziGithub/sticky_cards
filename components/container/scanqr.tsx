@@ -5,7 +5,7 @@ import phone from "@/images/phone2.svg";
 import { QRIcon } from "@/components/icons";
 export default function ScanQR() {
   return (
-    <div className="w-full flex justify-center items-start space-x-6 p-6 bg-stickyWhite">
+    <div className="w-full flex justify-center items-start space-x-6 p-10 bg-stickyWhite">
       <Card
         className="min-w-[563px] h-[838px] bg-stickyGreen rounded-[18px]"
         shadow="none"
