@@ -2197,3 +2197,21 @@ export const XIcon: React.FC<IconSvgProps> = ({
 </svg>
   );
 };
+export const PlusIcon: React.FC<IconSvgProps> = ({
+  size,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 33 33"
+      width={size || width}
+      {...props}
+    >
+<circle cx="16.5" cy="16.5" r="16.5" fill="#1A012F"/>
+<path d="M15.128 22.112V18.008H11V15.128H15.128V11H18.008V15.128H22.112V18.008H18.008V22.112H15.128Z" fill="#FFFDDF"/>
+</svg>
+  );
+};
