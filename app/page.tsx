@@ -1,4 +1,5 @@
 import Animation from "@/components/container/animation";
+import StickyCards from "@/components/container/cards";
 import Customer from "@/components/container/customers";
 import FAQ from "@/components/container/faq";
 import Hero from "@/components/container/hero";
@@ -16,6 +17,7 @@ export default function Home() {
       <Integrations />
       <Animation />
       <ScanQR />
+      <StickyCards />
       <Customer />
       <Program />
       <Signup />
