@@ -32,7 +32,7 @@ export default function FAQ() {
 
   return (
     <div className="bg-stickyWhite flex flex-col justify-center items-center p-12">
-      <div className="flex flex-col bg-stickyWhite w-[999px] gap-10 ">
+      <div className="flex flex-col justify-center items-center bg-stickyWhite  gap-10 ">
         <span className="text-[80px] leading-[80px] font-medium text-stickyBlack">
           Frequently Asked Questions
         </span>

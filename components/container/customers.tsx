@@ -17,7 +17,7 @@ export default function Customer() {
   ];
   return (
     <div className="w-full flex justify-center items-start space-x-6 p-10 bg-stickyWhite">
-      <div className="max-w-[735px] flex flex-col gap-6">
+      <div className="w-[740px] flex flex-col gap-6">
         <span className="text-start text-[72px] text-stickyBlack font-medium leading-[64.8px]">
           Your customers don’t need another app.
         </span>

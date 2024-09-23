@@ -11,7 +11,7 @@ export default function Signup() {
         shadow="none"
       >
         <CardBody className="overflow-visible flex flex-col justify-center items-center gap-6">
-          <p className="text-[60px] leading-[60px] text-center text-stickyWhite font-normal px-20">
+          <p className="text-[60px] leading-[60px] text-center text-stickyWhite font-normal px-10">
             Loyalty sign up takes 10 seconds.
           </p>
           <QRIcon height={231} width={231} className="text-stickyWhite" />

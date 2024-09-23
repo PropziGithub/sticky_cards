@@ -4,7 +4,7 @@ import { Link } from "@nextui-org/link";
 export default function Loyalty() {
   return (
     <div className="flex flex-col justify-center items-center bg-stickyWhite p-16">
-      <div className="max-w-[674px] flex flex-col justify-center items-center px-10 gap-4">
+      <div className="w-[780px] flex flex-col justify-center items-center px-10 gap-6">
         <CannabisIcon height={127} width={675} />
         <span className="text-center text-[110px] text-stickyBlack font-medium leading-[99px]">
           loyalty cards
