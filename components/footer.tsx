@@ -40,7 +40,7 @@ export default function Footer() {
     <div className="bg-stickyRed pt-10">
         <Wrapper>
         <Logo2 height={649} width={1145} />
-        <div className="flex justify-center items-center space-x-36 mt-12 py-10 w-full">
+        <div className="flex justify-center space-x-36 mt-12 py-10 w-full">
           <div className="flex flex-col justify-start">
             <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium mb-2">
               Support Hours:
