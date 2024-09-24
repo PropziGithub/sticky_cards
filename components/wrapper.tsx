@@ -10,7 +10,7 @@ export default function Wrapper({ className, children }: Props) {
   return (
     <div
       className={cn(
-        "w-full flex justify-center space-x-28 items-start bg-stickyWhite",
+        "w-[1442px] p-10 gap-10 flex flex-col justify-center items-center mx-auto",
         className
       )}
     >

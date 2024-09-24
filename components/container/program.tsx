@@ -3,9 +3,12 @@ import { Button, Link } from "@nextui-org/react";
 import Image from "next/image";
 import customer from "@/images/customer.svg";
 import { StickyIcon } from "@/components/icons";
+import Wrapper from "@/components/wrapper";
+
 export default function Program() {
   return (
-    <div className="w-full flex justify-center items-start space-x-6 p-10 bg-stickyWhite">
+    <Wrapper>
+    <div className="w-full flex justify-center items-start space-x-6">
       <Image alt="Card background" src={customer} />
       <div className="w-[1px] h-[838px] bg-stickyBlack"></div>
       <div className="max-w-[735px] h-[838px]  flex flex-col justify-between gap-6">
@@ -43,5 +46,6 @@ export default function Program() {
         </div>
       </div>
     </div>
+    </Wrapper>
   );
 }

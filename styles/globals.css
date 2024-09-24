@@ -5,6 +5,7 @@
 body,
 html {
   scroll-behavior: smooth;
+  background: #ECEBE5 !important;
 }
 
 ::-webkit-scrollbar {

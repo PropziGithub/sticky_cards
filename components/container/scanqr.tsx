@@ -3,9 +3,11 @@ import { Card,CardBody } from "@nextui-org/react";
 import Image from "next/image";
 import phone from "@/images/phone2.svg";
 import { QRIcon } from "@/components/icons";
+import Wrapper from "@/components/wrapper";
 export default function ScanQR() {
   return (
-    <div className="w-full flex justify-center items-start space-x-6 p-10 bg-stickyWhite">
+    <Wrapper>
+    <div className="w-full flex justify-center items-start space-x-6 pt-10">
       <Card
         className="w-[563px] h-[838px] bg-stickyGreen rounded-[18px]"
         shadow="none"
@@ -26,5 +28,6 @@ export default function ScanQR() {
         <QRIcon height={231} width={231} className="text-stickyYellow" />
       </div>
     </div>
+    </Wrapper>
   );
 }

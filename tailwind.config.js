@@ -20,7 +20,7 @@ module.exports = {
         stickyGreen: '#75B855',
         stickyOrange: '#FFAC00',
         stickyRed: '#FB5521',
-        stickyPurple:'#FDB0F4',
+        stickyPurple:'#FDB0F4'
       }
     },
   },
