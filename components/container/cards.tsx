@@ -1,24 +1,115 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-// import "swiper/css/effect-cards";
-import { EffectCards } from "swiper/modules";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Card, CardBody } from "@nextui-org/react";
-import { ReactNode } from "react";
 import { StickyIcon } from "@/components/icons";
 import Image from "next/image";
 import start from "@/images/start.svg";
 import show from "@/images/show.svg";
-import visits from "@/images/visits.svg";
 import Wrapper from "@/components/wrapper";
 
-interface Props {
-  color?: string;
-  children?: ReactNode;
-}
+let interval: any;
 
+type Card = {
+  id: number;
+  name: string;
+  designation: string;
+  content: React.ReactNode;
+};
+
+export const CardStack = ({
+  items,
+  offset,
+  scaleFactor,
+}: {
+  items: Card[];
+  offset?: number;
+  scaleFactor?: number;
+}) => {
+  const CARD_OFFSET = offset || 10;
+  const SCALE_FACTOR = scaleFactor || 0.06;
+  const [cards, setCards] = useState<Card[]>(items);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    startFlipping();
+    return () => clearInterval(interval);
+  }, []);
+
+  const startFlipping = () => {
+    interval = setInterval(() => {
+      setCards((prevCards: Card[]) => {
+        const newArray = [...prevCards];
+        newArray.unshift(newArray.pop()!);
+        return newArray;
+      });
+    }, 3000);
+  };
+
+  const stopFlipping = () => {
+    clearInterval(interval);
+  };
+
+  const handleMouseEnter = () => {
+    stopFlipping();
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+      if (isHovered) {
+        startFlipping();
+      }
+  };
+
+  return (
+    <div className="relative flex justify-center items-center w-full">
+      {cards.map((card, index) => (
+        <motion.div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          key={card.id}
+          className="absolute inset-0 cursor-pointer"
+          style={{
+            transformOrigin: "top center",
+          }}
+          animate={{
+            top: index * -CARD_OFFSET,
+            scale: 1 - index * SCALE_FACTOR,
+            zIndex: cards.length - index,
+          }}
+          transition={{
+            type: "tween",
+            ease: [0.25, 0.8, 0.5, 1],
+            duration: 0.4, 
+          }}
+        >
+          <div className="font-normal text-neutral-700 dark:text-neutral-200">
+            {card.content}
+          </div>
+          <div>
+            <p className="text-neutral-500 font-medium dark:text-white">
+              {card.name}
+            </p>
+            <p className="text-neutral-400 font-normal dark:text-neutral-200">
+              {card.designation}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
+// StickyCards Component
 export default function StickyCards() {
-  function InfoCard({ color = "stickyWhite", children }: Props) {
+  function InfoCard({
+    color = "stickyWhite",
+    children,
+  }: {
+    color?: string;
+    children?: React.ReactNode;
+  }) {
     const colorClass: { [key: string]: string } = {
       stickyWhite: "bg-stickyWhite",
       stickyBlack: "bg-stickyBlack",
@@ -33,7 +124,7 @@ export default function StickyCards() {
       <Card
         className={`h-[854px] w-[1383px] ${
           colorClass[color] || ""
-        }  rounded-[56px]`}
+        } rounded-[56px]`}
         shadow="none"
       >
         <CardBody className="overflow-visible p-10">{children}</CardBody>
@@ -41,35 +132,9 @@ export default function StickyCards() {
     );
   }
 
-  return (
-    <div className="bg-stickyWhite w-full">
-      {/* <Swiper
-        effect="cards"
-        grabCursor={true}
-        centeredSlides={true}
-        centerInsufficientSlides={true}
-        modules={[EffectCards]}
-        style={{
-          overflow: "hidden",
-        }}
-        cardsEffect={{
-          slideShadows: false,
-        }}
-      >
-        <SwiperSlide>
-          <InfoCard color="stickyPurple" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InfoCard color="stickyRed" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InfoCard color="stickyGreen" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <InfoCard color="stickyOrange" />
-        </SwiperSlide>
-      </Swiper> */}
-      <Wrapper>
+  const cards = [
+    {
+      card: (
         <InfoCard color="stickyPurple">
           <div className="flex justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
@@ -102,6 +167,10 @@ export default function StickyCards() {
             </Card>
           </div>
         </InfoCard>
+      ),
+    },
+    {
+      card: (
         <InfoCard color="stickyRed">
           <div className="flex justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
@@ -130,6 +199,10 @@ export default function StickyCards() {
             <Image alt="Card image" src={start} />
           </div>
         </InfoCard>
+      ),
+    },
+    {
+      card: (
         <InfoCard color="stickyGreen">
           <div className="flex justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
@@ -157,6 +230,10 @@ export default function StickyCards() {
             <Image alt="Card image" src={show} />
           </div>
         </InfoCard>
+      ),
+    },
+    {
+      card: (
         <InfoCard color="stickyOrange">
           <div className="flex justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
@@ -190,6 +267,21 @@ export default function StickyCards() {
             </Card>
           </div>
         </InfoCard>
+      ),
+    },
+  ];
+
+  return (
+    <div className="bg-stickyWhite h-[100vh]">
+      <Wrapper>
+        <CardStack
+          items={cards.map((item, index) => ({
+            id: index,
+            name: "",
+            designation: "",
+            content: item.card,
+          }))}
+        />
       </Wrapper>
     </div>
   );
