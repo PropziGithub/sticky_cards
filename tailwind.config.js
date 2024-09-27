@@ -21,7 +21,18 @@ module.exports = {
         stickyOrange: '#FFAC00',
         stickyRed: '#FB5521',
         stickyPurple:'#FDB0F4'
-      }
+      },
+      animation:{
+         scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
+      },
     },
   },
   darkMode: "class",
