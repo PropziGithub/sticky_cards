@@ -9,13 +9,13 @@ export default function Loyalty() {
         <span className="text-center text-stickyBlack font-medium text-[50px] leading-[11px] md:text-[110px]  md:leading-[99px]">
           loyalty cards
         </span>
-        <span className="text-center  text-stickyBlack font-medium text-[30px]  md:text-[48px] md:leading-[52.8px]">
+        <span className="text-center  text-stickyBlack font-medium text-[30px]  md:text-[48px] md:leading-[52.8px] w-full md:px-0 px-2">
           Send Push Notifications with 100% Delivery Rates.
         </span>
-        <div className="flex justify-between items-center md:space-x-10 space-x-4 pt-2 md:px-0 px-6">
+        <div className="flex justify-between items-center md:space-x-10 space-x-4 pt-2 md:px-0 px-6 md:w-auto w-full">
           <Button
             as={Link}
-            className="bg-stickyGreen text-stickyBlack text-[36px] h-[61px] rounded-[100px] p-4 font-bold leading-[28.8px]"
+            className="bg-stickyGreen text-stickyBlack md:text-[36px] text-[30px] h-[61px] rounded-[100px] p-4 font-bold leading-[28.8px]"
             href="#"
             variant="flat"
           >
@@ -23,7 +23,7 @@ export default function Loyalty() {
           </Button>
           <Button
             as={Link}
-            className="bg-stickyOrange text-stickyBlack text-[36px] h-[61px] rounded-[100px] py-2 font-bold leading-[28.8px]"
+            className="bg-stickyOrange text-stickyBlack md:text-[36px] text-[30px] h-[61px] rounded-[100px] py-2 font-bold leading-[28.8px]"
             href="#"
             variant="flat"
           >

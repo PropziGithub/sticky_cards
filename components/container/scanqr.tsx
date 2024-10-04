@@ -13,7 +13,7 @@ export default function ScanQR() {
         shadow="none"
       >
         <CardBody className="overflow-visible flex justify-center items-center">
-          <Image alt="Card background" className="md:mr-6 mr-0" src={phone} />
+          <Image alt="Card background" className="mr-6" src={phone} />
         </CardBody>
       </Card>
       <div className="md:w-[1px] md:h-[838px] w-full h-[1px] bg-stickyBlack"></div>

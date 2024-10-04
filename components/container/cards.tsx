@@ -139,7 +139,7 @@ export default function StickyCards() {
           <div className="flex  md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
               <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
-                <p className="md:text-[80px]  md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
+                <p className="md:text-[80px]  md:leading-[80px] text-[50px] leading-[50px] text-stickyBlack font-medium">
                   SMS doesn’t work when it comes to cannabis.
                 </p>
                 <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
@@ -175,7 +175,7 @@ export default function StickyCards() {
           <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
               <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
-                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
+                <p className="md:text-[80px] md:leading-[80px] text-[50px] leading-[50px] text-stickyBlack font-medium">
                   Scan QR to Start
                 </p>
                 <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
@@ -207,7 +207,7 @@ export default function StickyCards() {
           <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
               <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
-                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
+                <p className="md:text-[80px] md:leading-[80px] text-[50px] leading-[50px] text-stickyBlack font-medium">
                   Show & Go
                 </p>
                 <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
@@ -238,7 +238,7 @@ export default function StickyCards() {
           <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
               <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
-                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
+                <p className="md:text-[80px] md:leading-[80px] text-[50px] leading-[50px] text-stickyBlack font-medium">
                   Repeat Visits
                 </p>
                 <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">

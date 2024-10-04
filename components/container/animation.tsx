@@ -35,7 +35,7 @@ export default function Animation() {
   return (
     <div
       ref={ref}
-      className="min-h-[100vh] flex flex-col items-center pb-20 pt-10 justify-center bg-stickyWhite overflow-hidden"
+      className="min-h-[100vh] flex flex-col items-center pb-20 pt-10 justify-center bg-stickyWhite !overflow-hidden"
     >
       <motion.div
         className="transform"
