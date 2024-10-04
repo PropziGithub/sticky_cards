@@ -18,9 +18,9 @@ export default function Customer() {
   ];
   return (
     <Wrapper>
-      <div className="w-full flex justify-center items-start space-x-6 bg-stickyWhite">
-        <div className="w-[840px] flex flex-col gap-6">
-          <span className="text-start text-[72px] text-stickyBlack font-medium leading-[64.8px]">
+      <div className="w-full flex md:flex-row flex-col justify-center items-start md:space-x-6 gap-y-6 bg-stickyWhite">
+        <div className="md:w-[840px] w-full flex flex-col gap-6">
+          <span className="text-start md:text-[72px] md:leading-[64.8px] text-[50px] leading-[50px] text-stickyBlack font-medium ">
             Your customers don’t need another app.
           </span>
           <span className="text-start text-[36px] text-stickyBlack font-normal leading-[39.6px]">
@@ -53,9 +53,9 @@ export default function Customer() {
             </Button>
           </div>
         </div>
-        <div className="w-[1px] h-[838px] bg-stickyBlack"></div>
+        <div className="md:w-[1px] md:h-[838px] w-full h-[1px] bg-stickyBlack"></div>
         <Card
-          className="w-[563px] h-[838px] bg-stickyRed rounded-[18px]"
+          className="md:w-[563px] w-full h-[838px] bg-stickyRed rounded-[18px]"
           shadow="none"
         >
           <CardBody className="overflow-visible flex justify-center items-center">

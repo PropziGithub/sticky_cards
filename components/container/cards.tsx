@@ -122,7 +122,7 @@ export default function StickyCards() {
 
     return (
       <Card
-        className={`h-[854px] w-[1383px] ${
+        className={`md:h-[854px] md:w-[1383px] w-full h-[620px] ${
           colorClass[color] || ""
         } rounded-[56px]`}
         shadow="none"
@@ -136,13 +136,13 @@ export default function StickyCards() {
     {
       card: (
         <InfoCard color="stickyPurple">
-          <div className="flex justify-between space-x-6">
+          <div className="flex  md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
-              <div className="flex flex-col gap-10 max-w-[800px]">
-                <p className="text-[80px] leading-[80px] text-stickyBlack font-medium">
+              <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
+                <p className="md:text-[80px]  md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
                   SMS doesn’t work when it comes to cannabis.
                 </p>
-                <p className="text-[60px] leading-[66px] text-stickyBlack font-normal">
+                <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
                   Send messages the right way with 100% delivery.
                 </p>
               </div>
@@ -160,7 +160,7 @@ export default function StickyCards() {
               </div>
             </div>
             <Card
-              className={`h-[703px] w-[446px] bg-stickyWhite rounded-[18px]`}
+              className={`md:flex hidden h-[703px] w-[446px] bg-stickyWhite rounded-[18px]`}
               shadow="none"
             >
               <CardBody className="overflow-visible p-10"></CardBody>
@@ -172,13 +172,13 @@ export default function StickyCards() {
     {
       card: (
         <InfoCard color="stickyRed">
-          <div className="flex justify-between space-x-6">
+          <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
-              <div className="flex flex-col gap-10 max-w-[800px]">
-                <p className="text-[80px] leading-[80px] text-stickyBlack font-medium">
+              <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
+                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
                   Scan QR to Start
                 </p>
-                <p className="text-[60px] leading-[66px] text-stickyBlack font-normal">
+                <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
                   Add to any phone with a QR scan, friend’s referral, or from
                   your website!
                 </p>
@@ -196,7 +196,7 @@ export default function StickyCards() {
                 </div>
               </div>
             </div>
-            <Image alt="Card image" src={start} />
+            <Image className="md:flex hidden" alt="Card image" src={start} />
           </div>
         </InfoCard>
       ),
@@ -204,13 +204,13 @@ export default function StickyCards() {
     {
       card: (
         <InfoCard color="stickyGreen">
-          <div className="flex justify-between space-x-6">
+          <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
-              <div className="flex flex-col gap-10 max-w-[800px]">
-                <p className="text-[80px] leading-[80px] text-stickyBlack font-medium">
+              <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
+                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
                   Show & Go
                 </p>
-                <p className="text-[60px] leading-[66px] text-stickyBlack font-normal">
+                <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
                   Scan their card. No need to ask for a phone number anymore.
                 </p>
               </div>
@@ -227,7 +227,7 @@ export default function StickyCards() {
                 </div>
               </div>
             </div>
-            <Image alt="Card image" src={show} />
+            <Image className="md:flex hidden" alt="Card image" src={show} />
           </div>
         </InfoCard>
       ),
@@ -235,13 +235,13 @@ export default function StickyCards() {
     {
       card: (
         <InfoCard color="stickyOrange">
-          <div className="flex justify-between space-x-6">
+          <div className="flex md:flex-row flex-col justify-between space-x-6">
             <div className="flex flex-col justify-between items-start h-full">
-              <div className="flex flex-col gap-10 max-w-[800px]">
-                <p className="text-[80px] leading-[80px] text-stickyBlack font-medium">
+              <div className="flex flex-col gap-10 md:max-w-[800px] max-w-full">
+                <p className="md:text-[80px] md:leading-[80px] text-[60px] leading-[60px] text-stickyBlack font-medium">
                   Repeat Visits
                 </p>
-                <p className="text-[60px] leading-[66px] text-stickyBlack font-normal">
+                <p className="md:text-[60px] md:leading-[66px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
                   Bring your loyal customers back with automatic push
                   notifications.
                 </p>
@@ -260,7 +260,7 @@ export default function StickyCards() {
               </div>
             </div>
             <Card
-              className={`h-[703px] w-[446px] bg-stickyWhite rounded-[18px]`}
+              className={`md:flex hidden h-[703px] w-[446px] bg-stickyWhite rounded-[18px]`}
               shadow="none"
             >
               <CardBody className="overflow-visible p-10"></CardBody>

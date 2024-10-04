@@ -8,16 +8,16 @@ import Wrapper from "@/components/wrapper";
 export default function Program() {
   return (
     <Wrapper>
-    <div className="w-full flex justify-center items-start space-x-6">
+    <div className="w-full flex md:flex-row flex-col justify-center items-start md:space-x-6 gap-y-6">
       <Image alt="Card background" src={customer} />
-      <div className="w-[1px] h-[838px] bg-stickyBlack"></div>
-      <div className="max-w-[735px] h-[838px]  flex flex-col justify-between gap-6">
-        <span className="text-start text-[48px] text-stickyBlack font-normal leading-[48px]">
+      <div className="md:w-[1px] md:h-[838px] w-full h-[1px] bg-stickyBlack"></div>
+      <div className="max-w-[735px] md:h-[838px]  flex flex-col justify-between gap-6">
+        <span className="text-start md:text-[48px] md:leading-[48px] text-[36px] leading-[39.6px] text-stickyBlack font-normal">
           "Sticky Cards transformed our loyalty program. Our customers love the
           simplicity and rewards, and we’ve seen a noticeable increase in repeat
           business.”
         </span>
-        <div className="h-[170px] flex justify-between mt-10">
+        <div className="h-[170px] flex justify-between md:mt-10 mt-4">
           <div className="flex flex-col justify-between">
             <div className="flex flex-col gap-2">
               <p className="text-[24px] leading-[24px] text-stickyBlack font-medium">

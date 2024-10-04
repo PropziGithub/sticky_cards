@@ -38,18 +38,18 @@ export default function Footer() {
   ];
   return (
     <div className="bg-stickyRed pt-10">
-        <Wrapper>
-        <Logo2 height={649} width={1145} />
-        <div className="flex justify-center space-x-36 mt-12 py-10 w-full">
+      <Wrapper>
+        <Logo2 className="md:w-[1145px] md:h-[649px]" />
+        <div className="flex md:flex-row flex-col-reverse md:justify-center justify-start md:space-x-36 gap-y-6 md:mt-12 py-10 w-full">
           <div className="flex flex-col justify-start">
-            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium mb-2">
+            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium md:mb-2 md:mt-0 mt-6">
               Support Hours:
             </span>
-            <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal">
+            <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal md:mt-0 mt-4">
               Monday to Friday, 9:00 AM - 5:00 PM EST
             </p>
             <div className="flex flex-col gap-2">
-              <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal mt-10">
+              <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal md:mt-10 mt-4">
                 1-855-9-STICKY (784259)
               </p>
               <p className="text-[24px] text-stickyWhite leading-[19.2px] font-medium">
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-col justify-start items-start gap-4">
-            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium mb-4">
+            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium md:mb-4">
               Company
             </span>
             <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal">
@@ -89,7 +89,7 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex flex-col justify-start items-start gap-4">
-            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium mb-4">
+            <span className="text-[24px] text-stickyWhite leading-[19.2px] font-medium md:mb-4">
               Resources
             </span>
             <p className="text-[24px] text-stickyWhite leading-[19.2px] font-normal">
@@ -106,7 +106,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-    </Wrapper>
-      </div>
+      </Wrapper>
+    </div>
   );
 }

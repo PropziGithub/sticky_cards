@@ -31,17 +31,17 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="bg-stickyWhite flex flex-col justify-center items-center p-12">
-      <div className="flex flex-col justify-center items-center bg-stickyWhite  gap-10 ">
-        <span className="text-[80px] leading-[80px] font-medium text-stickyBlack">
+    <div className="bg-stickyWhite flex flex-col justify-center items-center md:px-12 py-12 px-4">
+      <div className="flex flex-col justify-center items-center bg-stickyWhite gap-10 ">
+        <span className="md:text-[80px] md:leading-[80px] text-[50px] leading-[50px] font-medium text-stickyBlack">
           Frequently Asked Questions
         </span>
-        <div className="w-[914px]">
+        <div className="md:w-[914px] w-full">
           <Accordion
             variant="bordered"
             className="border border-stickyBlack p-0 m-0"
             defaultExpandedKeys={["0"]}
-            dividerProps={{ className: "bg-stickyBlack max-w-full"}}
+            dividerProps={{ className: "bg-stickyBlack max-w-full" }}
           >
             {faqs.map((faq, index) => (
               <AccordionItem
@@ -52,13 +52,13 @@ export default function FAQ() {
                 classNames={{
                   base: "px-6 py-2",
                   title:
-                    "text-stickyBlack text-[24px] leading-[24px] font-medium",
+                    "text-stickyBlack md:text-[24px] md:leading-[24px] text-[18px] leading-[18px] font-medium",
                   content:
-                    "text-stickyBlack text-[24px] leading-[24px] font-normal px-6 flex items-start space-x-10",
+                    "text-stickyBlack md:text-[24px] md:leading-[24px] text-[18px] leading-[18px] font-normal md:px-6 px-3 flex items-start space-x-10",
                 }}
               >
                 <p>{faq?.answer}</p>
-                <PlusIcon height={60} width={60}/>
+                <PlusIcon height={20} width={20} className="flex-none"/>
               </AccordionItem>
             ))}
           </Accordion>

@@ -46,11 +46,11 @@ export default function Animation() {
         }}
         transition={transition}
       >
-        <AnimationIcon height={1003} width={1323} />
+        <AnimationIcon className="md:w-[1323px] md:h-[1003px] w-[700px] h-[600px]" />
       </motion.div>
 
       <motion.div
-        className="w-full flex justify-center items-center space-x-16 p-16 bg-stickyRed"
+        className="w-full flex md:flex-row flex-col justify-center items-center md:space-x-16 md:p-16 p-6 bg-stickyRed"
         style={{
           translateY: iconTranslateY,
         }}
